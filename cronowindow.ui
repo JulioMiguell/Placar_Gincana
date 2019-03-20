@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CronoWindow</class>
+ <widget class="QMainWindow" name="CronoWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>348</width>
+    <height>230</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cronômetro</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {background-color: #2C3E50}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {font: 20px; color: white}</string>
+    </property>
+    <property name="text">
+     <string>Configurações do CRONOMETRO</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxSeg">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>60</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>61</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{background-color: #67809F}</string>
+    </property>
+    <property name="maximum">
+     <number>60</number>
+    </property>
+    <property name="displayIntegerBase">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxMin">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>60</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>60</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMin">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>120</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {font: 20px; color: white}</string>
+    </property>
+    <property name="text">
+     <string>Min</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSeg">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>120</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {font: 20px; color: white}</string>
+    </property>
+    <property name="text">
+     <string>Seg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>160</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Definir</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
