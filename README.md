@@ -1,4 +1,4 @@
-# Placar_Gincana
+# Placar Gincana
 Simples aplicação de Placar para gincanas. 
 
 Aplicação desenvolvida utilizando a framwork Pyqt5. 
