@@ -1,6 +1,4 @@
-
 # -*- coding: utf-8 -*-
-
 
 from PyQt5 import QtGui
 from PyQt5.QtGui import QIcon, QPixmap
@@ -22,7 +20,7 @@ class Window(QMainWindow):
         self.top = 0
         self.left = 0
         self.width = 1366
-        self.height = 768
+        self.height = 650
 
         self.valorPlacarA = 0
         self.valorPlacarB = 0
@@ -37,9 +35,9 @@ class Window(QMainWindow):
         espaco.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
         #Titulo do programa
-        self.labelTituloJanela = QLabel('PLACAR GINCANA', self)
+        self.labelTituloJanela = QLabel(' PLACAR GINCANA', self)
         self.labelTituloJanela.setGeometry(450,10,430,100)
-        self.labelTituloJanela.setStyleSheet('QLabel {font: 50px; color: white; font: bold; background-color: #19B5FE; border-radius: 10px}')
+        self.labelTituloJanela.setStyleSheet('QLabel {font: 45px; color: white; font: bold; background-color: #19B5FE; border-radius: 10px}')
 
         #Seção dos LCDS
         self.lcdPlacar1 = QLCDNumber(self)
@@ -61,12 +59,12 @@ class Window(QMainWindow):
         
         #Label do cronometro
         self.labelCrono = QLabel(' 00:00 ', self)
-        self.labelCrono.setGeometry(130, 500, 170, 100)
+        self.labelCrono.setGeometry(130, 490, 170, 100)
         self.labelCrono.setStyleSheet('QLabel {background-color: #336E7B; color: white; font: 50px; border: None; border-radius: 20px}')
 
         #Label contendo a imagem central do programa
         self.imagemLabel = QLabel(self)
-        pixmap = QPixmap('competir.png')
+        pixmap = QPixmap('imagens/competir.png')
         self.imagemLabel.setPixmap(pixmap)
         self.imagemLabel.setGeometry(490,120,330,348)
 
@@ -75,8 +73,8 @@ class Window(QMainWindow):
         self.bntGrupB = QPushButton('Pontuar Grupo B',self)
         self.bntGrupA.setGeometry(370,520,200,60)
         self.bntGrupB.setGeometry(690,520,200,60)
-        self.bntGrupA.setStyleSheet('QPushButton {font: 25px; font: bold; background-color: #0AEB7E}')
-        self.bntGrupB.setStyleSheet('QPushButton {font: 25px; font: bold; background-color: #0AEB7E}')
+        self.bntGrupA.setStyleSheet('QPushButton {font: 23px; font: bold; background-color: #0AEB7E}')
+        self.bntGrupB.setStyleSheet('QPushButton {font: 23px; font: bold; background-color: #0AEB7E}')
 
         #Spin para definir a pontução (Está entre os dois botões)
         self.spinBox = QSpinBox(self)
@@ -93,12 +91,12 @@ class Window(QMainWindow):
         self.labelCronometro = QLabel('Cronometro', self)
         #self.labelCronometro.setIcon(QtGui.QIcon('crono'))
         self.labelCronometro.setStyleSheet('QLabel {font: 25px; color: black; font: bold; background-color: #ECF0F1;}')
-        self.labelCronometro.setGeometry(150, 450,140,50)
+        self.labelCronometro.setGeometry(145,440,150,50)
 
         self.bntIniciarCrono = QPushButton('INICIAR', self)
-        self.bntIniciarCrono.setGeometry(130, 600, 185, 50)
+        self.bntIniciarCrono.setGeometry(130, 590, 185, 50)
         self.bntIniciarCrono.setStyleSheet('QPushButton {font: 20px; color: black; font: bold; background-color: #ECF0F1; border-radius: 10px}')
-        self.bntIniciarCrono.setIcon(QtGui.QIcon('play'))
+        self.bntIniciarCrono.setIcon(QtGui.QIcon('imagens/play'))
         self.bntIniciarCrono.setCheckable(True)
         self.bntIniciarCrono.clicked.connect(self.threadCrono)
 
@@ -111,18 +109,18 @@ class Window(QMainWindow):
         #Seção Sortear Número
         self.labelSorteio = QLabel('Sortear Número',self)
         self.labelSorteio.setStyleSheet('QLabel {font: 25px; color: black; font: bold; background-color: #ECF0F1;}')
-        self.labelSorteio.setGeometry(970, 480,180,50)
+        self.labelSorteio.setGeometry(970, 450,200,50)
         self.labelAte = QLabel('ATÉ', self)
         self.labelAte.setStyleSheet('QLabel {font: 25px; color: black; font: bold; background-color: #ECF0F1;}')
-        self.labelAte.setGeometry(1040,550,50,50)
+        self.labelAte.setGeometry(1040,520,50,50)
         self.spinBoxNumb1 = QSpinBox(self)
         self.spinBoxNumb2 = QSpinBox(self)
-        self.spinBoxNumb1.setGeometry(940, 550, 90, 50)
-        self.spinBoxNumb2.setGeometry(1100, 550, 90, 50)
+        self.spinBoxNumb1.setGeometry(940, 520, 90, 50)
+        self.spinBoxNumb2.setGeometry(1100, 520, 90, 50)
         self.spinBoxNumb1.setStyleSheet('QSpinBox {font: 50px}')
         self.spinBoxNumb2.setStyleSheet('QSpinBox {font: 50px}')
         self.bntSortear = QPushButton('Sortear', self)
-        self.bntSortear.setGeometry(1020, 630,90,50)
+        self.bntSortear.setGeometry(1020, 590,90,50)
         self.bntSortear.setStyleSheet('QPushButton {font: 25px; color: black; font: bold; background-color: #F9690E; border-radius: 10px}')
         self.bntSortear.clicked.connect(self.sortearNumero)
         
