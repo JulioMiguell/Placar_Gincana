@@ -11,7 +11,7 @@ QLabel, QPushButton, QSpinBox, QWidget, QHBoxLayout, QSizePolicy, QAbstractButto
 QLineEdit, QMessageBox)
 from Cronometro import Cronometro
 
-class Window(QMainWindow):
+class Placar(QMainWindow):
     
     def __init__(self):
         super().__init__()
@@ -20,7 +20,7 @@ class Window(QMainWindow):
         self.top = 0
         self.left = 0
         self.width = 1366
-        self.height = 650
+        self.height = 768
 
         self.valorPlacarA = 0
         self.valorPlacarB = 0
@@ -102,8 +102,8 @@ class Window(QMainWindow):
 
             #Botão configurar cronometro
         self.bntConfingCronometro = QPushButton('Configurar', self)
-        self.bntConfingCronometro.setGeometry(165, 650,100,50)
-        self.bntConfingCronometro.setStyleSheet('QPushButton {font: 20px; color: black; font: bold; background-color: #ECF0F1; border-radius: 10px}')
+        self.bntConfingCronometro.setGeometry(180, 650,100,50)
+        self.bntConfingCronometro.setStyleSheet('QPushButton {font: 18px; color: black; font: bold; background-color: #ECF0F1; border-radius: 10px}')
         self.bntConfingCronometro.clicked.connect(self.configCronometro)
         
         #Seção Sortear Número
@@ -227,5 +227,5 @@ class Window(QMainWindow):
             
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = Window()
+    window = Placar()
     sys.exit(app.exec_())
